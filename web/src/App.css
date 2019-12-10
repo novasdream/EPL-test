@@ -1,0 +1,105 @@
+
+.main {
+  display: grid;
+  grid-template-columns: 20px auto 20px;
+  grid-template-areas:
+  ". title . "
+  ". score . "
+  ". legend . ";
+}
+
+@media (min-width: 1100px) {
+  .main {
+    display: grid;
+    grid-template-columns: 30vw auto 30vw;
+    grid-template-areas: 
+    ". title . "
+    ". score . "
+    ". legend . ";
+  }
+}
+
+ul {
+  list-style-type: none;
+}
+
+.title {
+  grid-area: title;
+}
+
+.container {
+  grid-area: score;
+  display: grid;
+  grid-template-columns: 3px 30px auto 40px 40px 40px 40px 40px 40px 40px;
+}
+
+.header {
+  grid-area: header;
+  margin: 5px;
+  background: tomato;
+  font-size: 1.5em;
+}
+
+.legend {
+  width: 0.7rem;
+  height: 0.7rem;
+  display: inline-block;
+}
+
+.legend-area {
+  grid-area: legend;
+  text-align: center;
+}
+
+.green {
+  background: lime;
+}
+
+
+.tomato {
+  background: tomato;
+}
+
+
+.gold {
+  background: gold;
+}
+
+
+.item {
+  grid-area: team;
+  margin: 5px;
+  background: tomato;
+  font-size: 1.5em;
+}
+
+.position {
+  text-align: center;
+}
+
+.name {
+}
+
+.wins {
+  text-align: center;
+}
+
+.draw {
+  text-align: center;
+}
+
+.losses {
+  text-align: center;
+}
+.goals-for {
+  text-align: center;
+}
+.goals-against {
+  text-align: center;
+}
+.goals-diff {
+  text-align: center;
+}
+.points {
+  text-align: center;
+}

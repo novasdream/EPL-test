@@ -1,0 +1,95 @@
+<html>
+    <head>
+        <style type="text/css" class="cp-pen-styles">
+            .main {
+                display: grid;
+                grid-template-columns: 300px auto 300px;
+                grid-template-areas: ". score ."
+            }
+            .container {
+                grid-area: score;
+                display: grid;
+                grid-template-columns: 3px 30px auto 40px 40px 40px 40px 40px 40px 40px;
+            }
+
+            .header {
+                grid-area: header;
+                margin: 5px;
+                background: tomato;
+                font-size: 1.5em;
+            }
+
+            .green {
+                background: lime;
+            }
+
+            .item {
+                grid-area: team;
+                margin: 5px;
+                background: tomato;
+                font-size: 1.5em;
+            }
+
+            .position {
+                text-align: center;
+            }
+
+            .name {
+            }
+
+            .wins {
+                text-align: center;
+            }
+
+            .draw {
+                text-align: center;
+            }
+
+            .losses {
+                text-align: center;
+            }
+            .goals-for {
+                text-align: center;
+            }
+            .goals-against {
+                text-align: center;
+            }
+            .goals-diff {
+                text-align: center;
+            }
+            .points {
+                text-align: center;
+            }
+
+        </style>
+    </head>
+        
+    <div class="main">
+        <div class="container">
+            <div> </div>
+            <div class="position">#</div>
+            <div class="name">Club</div>
+            <div class="wins">W</div>
+            <div class="draw">D</div>
+            <div class="losses">L</div>
+            <div class="goals-for">GF</div>
+            <div class="goals-against">GA</div>
+            <div class="goals-diff">GD</div>
+            <div class="points">Pts</div>
+            {{#each teams}}
+                {{#if this.position < 4}}
+                   <div class="green"> </div>
+                {{/if}}
+                <div class="position">{{this.position}}</div>
+                <div class="name">{{this.name}}</div>
+                <div class="wins">{{this.win_count}}</div>
+                <div class="draw">{{this.draw_count}}</div>
+                <div class="losses">{{this.losses_count}}</div>
+                <div class="goals-for">{{this.goals_for}}</div>
+                <div class="goals-against">{{this.goals_against}}</div>
+                <div class="goals-diff">{{this.goals_diff}}</div>
+                <div class="points">{{this.total_points}}</div>
+            {{/each}}
+        </div>
+    </div>
+</html>
